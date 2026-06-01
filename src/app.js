@@ -58,7 +58,10 @@ module.exports = app;
 app.get('/', (req, res) => {
   res.json({
     project: 'GitHub Profile Analyzer API',
+    status: 'running',
     health: '/health',
     docs: '/api-docs'
   });
 });
+
+app.use(notFoundHandler);
