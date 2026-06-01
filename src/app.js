@@ -14,7 +14,7 @@ const healthRoutes = require('./routes/health.routes');
 const swaggerSpec = require('./docs/swagger');
 
 const app = express();
-
+app.set('trust proxy', 1);
 // Security and utility middleware
 app.use(helmet());
 app.use(cors());
