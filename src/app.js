@@ -55,3 +55,10 @@ if (require.main === module) {
 }
 
 module.exports = app;
+app.get('/', (req, res) => {
+  res.json({
+    project: 'GitHub Profile Analyzer API',
+    health: '/health',
+    docs: '/api-docs'
+  });
+});
